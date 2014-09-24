@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} &middot; Archives{% endblock %}
+{% block content %}
+
+            <h1>Archives</h1>
+
+            {#- hold on to your butts! #}
+
+            {% set month = None -%}
+            {%- for article in dates -%}
+            {% set cmonth = article.date.month %}
+            {%- if not month -%}
+            {%   set month = cmonth %}
+
+            <h4 class="date">{{ article.date.strftime("%b %Y") }}</h4>
+            <div class="post archives">
+                <ul>
+            {%- elif cmonth < month -%}
+            {%   set month = cmonth %}
+
+                </ul>
+                <br/>
+            </div>
+
+            <h4 class="date">{{ article.date.strftime("%b %Y") }}</h4>
+            <div class="post archives">
+                <ul>
+            {%- endif %}
+
+                    <li>{{ article.date.strftime("%d") }}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title | truncate(70) }}</a></li>
+            {%- endfor %}
+
+                </ul>
+                <br/>
+            </div>
+{% endblock %}
