@@ -3,35 +3,21 @@
 {% block title %}{{ SITENAME }} &middot; Archives{% endblock %}
 {% block content %}
 
-            <h1>Archives</h1>
-
-            {#- hold on to your butts! #}
-
-            {% set month = None -%}
-            {%- for article in dates -%}
-            {% set cmonth = article.date.month %}
-            {%- if not month -%}
-            {%   set month = cmonth %}
-
-            <h4 class="date">{{ article.date.strftime("%b %Y") }}</h4>
+    <h1>Archives</h1>
+    
+    {# based on http://stackoverflow.com/questions/12764291/jinja2-group-by-month-year #}
+    
+    <div>
+    {% for year, year_group in dates|groupby('date.year')|reverse %}
+        {% for month, month_group in year_group|groupby('date.month')|reverse %}
+            <h4 class="date">{{ (month_group|first).date|strftime('%b %Y') }}</h4>    
             <div class="post archives">
                 <ul>
-            {%- elif cmonth < month -%}
-            {%   set month = cmonth %}
-
+                {% for article in month_group %}
+                    <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+                {% endfor %}
                 </ul>
-                <br/>
             </div>
-
-            <h4 class="date">{{ article.date.strftime("%b %Y") }}</h4>
-            <div class="post archives">
-                <ul>
-            {%- endif %}
-
-                    <li>{{ article.date.strftime("%d") }}: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title | truncate(70) }}</a></li>
-            {%- endfor %}
-
-                </ul>
-                <br/>
-            </div>
+        {% endfor %}
+    {% endfor %}
 {% endblock %}
