@@ -11,7 +11,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
@@ -142,6 +142,9 @@ blockquote {
     margin-bottom: 1.5em;
     margin-left: 160px;
 }
+.post p {
+	text-align: justify;
+}
 
 .page {
     margin: 0 90px;
@@ -172,6 +175,9 @@ img {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 0.3em;
     max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*sub and sup stolen from Twitter bootstrap.*/
@@ -294,6 +300,24 @@ header h2 {
     display: block;
     margin: 0 160px;
     text-align: center;
+}
+
+code {
+	background-color: #F9F2F4;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	box-sizing: border-box;
+	color: #C7254E;
+	font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+	font-size: 12.6px;
+	line-height: 18px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 2px;
+	white-space: nowrap;
 }
 
 footer {
