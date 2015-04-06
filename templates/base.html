@@ -8,7 +8,9 @@
     {% block head %}
     <meta charset="utf-8" />
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-    <link rel="shortcut icon" href="{{ SITEURL }}/favicon.ico" />
+    {# favicon #}
+    <link rel="shortcut icon" type="image/png" href="{{ SITEURL }}/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ SITEURL }}/favicon.ico">
     {% if FEED_ALL_ATOM %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
     {% endif %}
@@ -35,20 +37,26 @@
     {% endif %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/print.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
     {% endblock head %}
 </head>
 <body>
     <header>
         <nav>
-            {%- block ephemeral_nav %}{%- endblock %}
-
-            <li {%- if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
-            {% if DISPLAY_PAGES_ON_MENU %}
-            {% for page in PAGES %}
-            <li {%- if output_file == page.url %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-            {% endfor %}
-            {% endif %}
-            <li {%- if output_file == "archives.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/archives.html">Archives</a></li>
+            {% block ephemeral_nav %}{%- endblock %}
+                <li {%- if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
+                {% if DISPLAY_PAGES_ON_MENU %}
+                {% for page in PAGES %}
+                <li {%- if output_file == page.url + "/index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+                {% endif %}
+                {% if MENUITEMS %}
+                {% for title, link in MENUITEMS %}
+                <li><a href="{{ link }}">{{ title }}</a></li>
+                {% endfor %}
+                {% endif %}
+                <li {%- if output_file == ARCHIVES_SAVE_AS %} class="selected"{% endif %}><a href="{% if ARCHIVES_URL %}{{ ARCHIVES_URL }}{% else %}{{ SITEURL }}/archives.html{% endif %}">Archives</a></li>
         </nav>
         <div class="header_box">
             <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
