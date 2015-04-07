@@ -37,7 +37,7 @@
     {% endif %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/print.css" type="text/css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/print.css" type="text/css" media="print" />
     <meta name="generator" content="Pelican" />
     {% endblock head %}
 </head>
@@ -47,8 +47,8 @@
             {% block ephemeral_nav %}{%- endblock %}
                 <li {%- if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
                 {% if DISPLAY_PAGES_ON_MENU %}
-                {% for page in PAGES %}
-                <li {%- if output_file == page.url + "/index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                {% for p in PAGES %}
+                <li {%- if p == page %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                 {% endfor %}
                 {% endif %}
                 {% if MENUITEMS %}
