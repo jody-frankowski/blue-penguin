@@ -4,6 +4,7 @@ License: none (public domain)
  */
 /* Mockingbird Theme by Nevan Scott nevanscott.com */
 /* Modified by Jody Frankowski */
+/* Modified by ix5 */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -126,6 +127,7 @@ blockquote {
     padding: 0 .3em;
     border: 1px transparent solid;
     border-radius: 5px;
+    margin: 0 0 0.3em 0;
 }
 .info a.tags:hover {
     background: inherit;
@@ -271,7 +273,7 @@ header h2 {
     font-family: sans-serif;
     line-height: 2.5em;
     margin: 4.5em 0 3em;
-    background-color: #EEE;
+    background-color: #F9F9F9;
     color: #444;
     border-radius: 5px;
 }
@@ -281,6 +283,7 @@ header h2 {
     text-align: center;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    background-color: #EEE;
 }
 .pages a.prev_page {
     float: left;
@@ -288,6 +291,7 @@ header h2 {
     text-align: center;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    background-color: #EEE;
 }
 .pages a {
     color: inherit;
