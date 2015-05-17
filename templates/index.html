@@ -2,7 +2,7 @@
 
 {% block content %}
 {% set date = None %}
-{% for article in articles_page.object_list -%}
+{% for article in articles_page.object_list %}
 {%   if date != article.date.date() %}
 {%     set first_article_of_day = True %}
 {%   else %}
@@ -11,5 +11,6 @@
 {%   set date = article.date.date() %}
 {%   include "article_stub.html" %}
 {% endfor %}
+
 {% include "pagination.html" %}
 {% endblock %}

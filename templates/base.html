@@ -1,5 +1,5 @@
 {% macro ephemeral_nav_link(what, where, selected=False) -%}
-<li class="ephemeral{%- if selected %} selected{% endif %}"><a href="{{ SITEURL }}/{{ where }}">{{what}}</a></li>
+<li class="ephemeral{% if selected %} selected{% endif %}"><a href="{{ SITEURL }}/{{ where }}">{{what}}</a></li>
 {%- endmacro -%}
 
 <!DOCTYPE html>

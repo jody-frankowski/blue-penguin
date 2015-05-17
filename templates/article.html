@@ -10,7 +10,8 @@
     {% endif %}
 {% endblock %}
 
-{% block title %}{{ SITENAME }} &middot; {{ article.title }}{% endblock %}
+{% block title %}{{ SITENAME }} | {{ article.title }}{% endblock %}
+
 {% block content %}
 {% include "article_stub.html" %}
 {% endblock %}
