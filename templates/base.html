@@ -42,22 +42,27 @@
     {% endblock head %}
 </head>
 <body>
+    {% if DISPLAY_HEADER %}
     <header>
+        {% if DISPLAY_MENU %}
         <nav>
-            {% block ephemeral_nav %}{%- endblock %}
-                <li {%- if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
+            {% block ephemeral_nav %}{% endblock %}
+                {% if DISPLAY_HOME %}
+                <li{% if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
+                {% endif %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                 {% for p in PAGES %}
-                <li {%- if p == page %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                <li{% if p == page %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                 {% endfor %}
                 {% endif %}
-                {% if MENUITEMS %}
                 {% for title, link in MENUITEMS %}
                 <li><a href="{{ link }}">{{ title }}</a></li>
                 {% endfor %}
-                {% endif %}
-                <li {%- if output_file == ARCHIVES_SAVE_AS %} class="selected"{% endif %}><a href="{{ SITEURL }}/{% if ARCHIVES_URL %}{{ ARCHIVES_URL }}{% else %}archives.html{% endif %}">Archives</a></li>
+                {% for name, link, file in MENU_INTERNAL_PAGES %}
+                <li{% if output_file == file %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ link }}">{{ name }}</a></li>
+                {% endfor %}
         </nav>
+        {% endif %}
         <div class="header_box">
             <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
             {% if SITESUBTITLE %}
@@ -65,10 +70,12 @@
             {% endif %}
         </div>
     </header>
+    {% endif %}
     <div id="wrapper">
         <div id="content">
             {%- block content -%}{%- endblock %}
 
+            {% if DISPLAY_FOOTER %}
             <div class="clear"></div>
             <footer>
                 <p>
@@ -84,6 +91,7 @@
                 <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">Rss Feed</a>
                  {% endif %}
             </footer>
+            {% endif %}
         </div>
         <div class="clear"></div>
     </div>
