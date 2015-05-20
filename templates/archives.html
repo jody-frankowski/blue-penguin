@@ -7,7 +7,6 @@
 
     {# based on http://stackoverflow.com/questions/12764291/jinja2-group-by-month-year #}
 
-    <div>
     {% for year, year_group in dates|groupby('date.year')|reverse %}
         {% for month, month_group in year_group|groupby('date.month')|reverse %}
             <h4 class="date">{{ (month_group|first).date|strftime('%b %Y') }}</h4>

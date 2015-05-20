@@ -229,7 +229,7 @@ form.inline_edit {
     text-align: right;
 }
 
-nav {
+nav ul {
     float: right;
     list-style: none;
     margin: 0 0 0 3em;

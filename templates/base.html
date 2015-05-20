@@ -46,6 +46,7 @@
     <header>
         {% if DISPLAY_MENU or DISPLAY_MENU is not defined %}
         <nav>
+            <ul>
             {% block ephemeral_nav %}{% endblock %}
                 {% if DISPLAY_HOME or DISPLAY_HOME is not defined %}
                 <li{% if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
@@ -61,6 +62,7 @@
                 {% for name, link, file in MENU_INTERNAL_PAGES %}
                 <li{% if output_file == file %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ link }}">{{ name }}</a></li>
                 {% endfor %}
+            </ul>
         </nav>
         {% endif %}
         <div class="header_box">
