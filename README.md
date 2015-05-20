@@ -37,12 +37,19 @@ MENUITEMS = (
 )
 ```
 
+## How to contribute
+Contributions are very welcome. Keep in mind that this theme goal is to be
+minimalistic/simple. Contributions will be accepted through Github Pull
+Requests. If you don’t have a Github account you can suggest me your
+changes by email (which you can find on my github profile).
+
 ## Contributors
 * [Nevan Scott](https://github.com/nevanscott/Mockingbird) (original author)
 * [wrl](http://github.com/wrl) (port to pelican, pelican-mockingbird)
 * [Jody Frankowski](http://github.com/jody-frankowski) (Blue Penguin)
 * [Grimbox](https://github.com/Grimbox)
 * [ix5](https://github.com/ix5)
+* [dn0](https://github.com/dn0)
 
 ## License
 Public domain.
