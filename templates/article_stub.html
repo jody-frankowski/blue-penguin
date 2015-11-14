@@ -23,7 +23,9 @@
                     {% endfor %}
                     {% endif %}
                 </div>
-
+		{% if articles_page %}
+		<a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">Click to read and post comments</a>
+		{% else %}
 		{% include "disqus.html" %}
-
+		{% endif %}
             </article>
