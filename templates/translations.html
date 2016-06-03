@@ -1,0 +1,6 @@
+{% if article.translations %}
+Translations: 
+    {% for translation in article.translations %}
+        <a href="{{ SITEURL }}/{{ translation.save_as }}">{{ translation.lang }}</a>
+    {% endfor %}
+{% endif %}

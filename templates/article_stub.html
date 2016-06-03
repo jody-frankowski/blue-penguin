@@ -9,6 +9,11 @@
                 </h2>
                 {% endif %}
 
+		{% if not articles_page %}
+		{% include "translations.html" %}
+		{% endif %}                
+                
+
                 {{ article.content }}
                 <div class="clear"></div>
 
