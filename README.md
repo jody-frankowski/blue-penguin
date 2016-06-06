@@ -50,6 +50,9 @@ changes by email (which you can find on my github profile).
 * [Grimbox](https://github.com/Grimbox)
 * [ix5](https://github.com/ix5)
 * [dn0](https://github.com/dn0)
+* [anhtuann](https://github.com/anhtuann)
+* [aperep](https://github.com/aperep)
+* [iranzo](https://github.com/iranzo)
 
 ## License
 Public domain.
