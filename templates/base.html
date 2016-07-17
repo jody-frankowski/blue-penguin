@@ -50,7 +50,7 @@
             <ul>
             {% block ephemeral_nav %}{% endblock %}
                 {% if DISPLAY_HOME or DISPLAY_HOME is not defined %}
-                <li{% if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
+                <li{% if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/index.html">Home</a></li>
                 {% endif %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                 {% for p in PAGES %}
@@ -67,7 +67,7 @@
         </nav>
         {% endif %}
         <div class="header_box">
-            <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+            <h1><a href="{{ SITEURL }}/index.html">{{ SITENAME }}</a></h1>
             {% if SITESUBTITLE %}
             <h2>{{ SITESUBTITLE }}</h2>
             {% endif %}
