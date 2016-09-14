@@ -53,6 +53,7 @@ changes by email (which you can find on my github profile).
 * [anhtuann](https://github.com/anhtuann)
 * [aperep](https://github.com/aperep)
 * [iranzo](https://github.com/iranzo)
+* [thetlk](https://github.com/thetlk)
 
 ## License
 Public domain.
