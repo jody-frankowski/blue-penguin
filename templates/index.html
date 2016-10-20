@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% block title %}{{ SITENAME }}{% if articles_page.number != 1 %} | Page {{ articles_page.number }}{% endif %}{% endblock %}
 {% block content %}
 {% set date = None %}
 {% for article in articles_page.object_list %}
