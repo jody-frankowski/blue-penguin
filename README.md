@@ -54,6 +54,7 @@ changes by email (which you can find on my github profile).
 * [aperep](https://github.com/aperep)
 * [iranzo](https://github.com/iranzo)
 * [thetlk](https://github.com/thetlk)
+* [SnorlaxYum](https://github.com/SnorlaxYum)
 
 ## License
 Public domain.
