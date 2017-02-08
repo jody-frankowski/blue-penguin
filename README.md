@@ -7,6 +7,9 @@ A simple theme for pelican. Solarized pygments. Feeds support.
 ```python
 # all the following settings are *optional*
 
+# HTML metadata
+SITEDESCRIPTION = ''
+
 # all defaults to True.
 DISPLAY_HEADER = True
 DISPLAY_FOOTER = True
