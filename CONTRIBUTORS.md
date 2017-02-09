@@ -11,3 +11,5 @@
 * [iranzo](https://github.com/iranzo)
 * [thetlk](https://github.com/thetlk)
 * [SnorlaxYum](https://github.com/SnorlaxYum)
+* [guikcd](https://github.com/guikcd)
+* [jorgesumle](https://github.com/jorgesumle)
