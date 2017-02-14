@@ -55,7 +55,7 @@
                 <li{% if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/">Home</a></li>
                 {% endif %}
                 {% if DISPLAY_PAGES_ON_MENU %}
-                {% for p in PAGES %}
+                {% for p in pages %}
                 <li{% if p == page %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                 {% endfor %}
                 {% endif %}
