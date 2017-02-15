@@ -13,3 +13,4 @@
 * [SnorlaxYum](https://github.com/SnorlaxYum)
 * [guikcd](https://github.com/guikcd)
 * [jorgesumle](https://github.com/jorgesumle)
+* [crxxn](https://github.com/crxxn)
