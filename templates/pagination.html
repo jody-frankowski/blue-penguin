@@ -3,7 +3,7 @@
 
                 <div class="clear"></div>
                 <div class="pages">
-	{% if PAGINATION_PATTERNS %}
+	{% if PAGINATION_PATTERNS[0][0] != 0 %}
                 {%- if articles_page.has_previous() %}
                 {%   if articles_page.previous_page_number() == 1 %}
 
