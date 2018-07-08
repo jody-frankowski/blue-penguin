@@ -38,6 +38,28 @@ MENUITEMS = (
     ('GitHub', 'https://github.com/'),
     ('Linux Kernel', 'https://www.kernel.org/'),
 )
+
+# Enable disqus comments
+DISQUS_SITENAME = "yoursiteusername"
+DISQUS_DISPLAY_COUNTS = True
+
+# sitemap for google
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
+
+# Google analyics id
+GOOGLE_ANALYTICS = "UA-YOURID"
 ```
 
 ## How to contribute
