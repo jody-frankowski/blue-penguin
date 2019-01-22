@@ -14,3 +14,6 @@
 * [guikcd](https://github.com/guikcd)
 * [jorgesumle](https://github.com/jorgesumle)
 * [crxxn](https://github.com/crxxn)
+* [gavinzbq](https://github.com/gavinzbq)
+* [sylvainmetayer](https://github.com/sylvainmetayer)
+* [wbob](https://github.com/wbob)
