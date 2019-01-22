@@ -65,7 +65,6 @@ body {
 
 header, #wrapper {
     padding: 0 10px;
-    min-width: 500px;
     max-width: 910px;
     margin: auto;
 }
@@ -95,6 +94,9 @@ h1, h2, h3 {
 
 img, p, .post > .highlight, .highlighttable, h4, h5, h6 {
     margin-top: 1.2em;
+}
+img + em {
+    font-size: .8em;
 }
 
 blockquote {
@@ -340,3 +342,34 @@ footer p { margin: 0; }
 .right { float: right; }
 
 .clear { clear: both; }
+
+@media screen and (max-width: 1024px) {
+    #wrapper {
+        margin-left: 2.6em;
+        padding:1em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #wrapper {
+        margin: 0;
+        padding: 1em;
+    }
+    .date {
+        width: 100%;
+        margin: 0 0 .5em 0;
+    }
+    .post {
+        margin: 0 0 4.5em 0;
+    }
+    .post pre,
+    .post code {
+        white-space: pre-wrap;
+    }
+    .archives {
+        margin: 0 0 1.5em 0 !important;
+    }
+    nav ul {
+        margin: 0 0 1em 0;
+    }
+}
