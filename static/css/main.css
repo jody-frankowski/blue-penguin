@@ -105,6 +105,14 @@ blockquote {
     border-left: 1px solid #EEE;
 }
 
+table {
+    width: 100%;
+    margin: 1em 0;
+}
+thead {
+    border-bottom: 1px solid black;
+}
+
 .date {
     color: #CCC;
     float: left;
