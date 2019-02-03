@@ -358,7 +358,7 @@ footer p { margin: 0; }
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px), print {
     #wrapper {
         margin: 0;
         padding: 1em;
@@ -380,4 +380,38 @@ footer p { margin: 0; }
     nav ul {
         margin: 0 0 1em 0;
     }
+}
+@media print {
+    * {
+        background: #fff;
+    }
+    #wrapper, #content {
+        margin: 0;
+        padding: 0;
+    }
+    header, footer, nav {
+        display: none;
+    }
+    img {
+        break-inside: avoid;
+    }
+    p, table, pre {
+        widows: 3;
+        orphans: 3;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        break-after: avoid;
+    }
+    h1, h2 {
+        font-size: 14pt;
+    }
+    h3, h4, h4.date {
+        font-size: 12pt;
+    }
+    .post p, .post ul li, .post ol li, .post table {
+        font-size: 11pt;
+    }
+}
+@page {
+    margin: 1.5cm;
 }
