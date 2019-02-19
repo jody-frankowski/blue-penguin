@@ -17,3 +17,4 @@
 * [gavinzbq](https://github.com/gavinzbq)
 * [sylvainmetayer](https://github.com/sylvainmetayer)
 * [wbob](https://github.com/wbob)
+* [Fabian Pflug](https://github.com/gumulka)
