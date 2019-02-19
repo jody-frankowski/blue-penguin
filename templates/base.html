@@ -41,6 +41,19 @@
     <meta name="generator" content="Pelican" />
     <meta name="description" content="{{ SITEDESCRIPTION }}" />
     <meta name="author" content="{{ AUTHOR }}" />
+    {% if HIGHLIGHT_COLOR %}
+    <style type="text/css">
+a {
+    color: {{ HIGHLIGHT_COLOR }};
+}
+h1 {
+    color: {{ HIGHLIGHT_COLOR }};
+}
+nav li.selected a {
+    background-color: {{ HIGHLIGHT_COLOR }};
+}
+    </style>
+    {% endif %}
     {% endblock head %}
 </head>
 <body>

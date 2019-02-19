@@ -38,6 +38,9 @@ MENUITEMS = (
     ('GitHub', 'https://github.com/'),
     ('Linux Kernel', 'https://www.kernel.org/'),
 )
+
+# set the color for links, headlines and home
+HIGHLIGHT_COLOR = '#15A9DB'
 ```
 
 ## How to contribute
@@ -51,3 +54,4 @@ See [CONTRIBUTORS.md](CONTRIBUTORS.md).
 
 ## License
 Public domain.
+
