@@ -60,7 +60,6 @@ body {
     font-family: Georgia, serif;
     font-size: 16px;
     line-height: 1.5em;
-    color: #444;
 }
 
 header, #wrapper {
@@ -286,7 +285,6 @@ header h2 {
     line-height: 2.5em;
     margin: 4.5em 0 3em;
     background-color: #F9F9F9;
-    color: #444;
     border-radius: 5px;
 }
 .pages a.next_page {
