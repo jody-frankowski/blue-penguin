@@ -38,6 +38,13 @@ MENUITEMS = (
     ('GitHub', 'https://github.com/'),
     ('Linux Kernel', 'https://www.kernel.org/'),
 )
+
+# example pagination pattern
+PAGINATION_PATTERNS = (
+    (1, '{url}', '{save_as}'),
+    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+)
+
 ```
 
 ## How to contribute
