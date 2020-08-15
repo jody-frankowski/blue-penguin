@@ -10,7 +10,7 @@
     {% endif %}
 {% endblock %}
 
-{% block title %}{{ SITENAME }} | {{ article.title }}{% endblock %}
+{% block title %}{{ SITENAME }} | {{ article.title|striptags }}{% endblock %}
 
 {% block content %}
 {% include "article_stub.html" %}
