@@ -175,6 +175,7 @@ thead {
     border-right: 1px solid #00232C;
     color: #586E75;
     text-shadow: 0px -1px #021014;
+    font-size: 12.6px;
 }
 td.code {
     width: 100%;
@@ -211,9 +212,9 @@ sub {
 
 .post pre, .page pre {
     padding: .8em;
-    font-size: 12px;
-    font-family: Monospace;
-    line-height: 1.1em;
+    font-size: 12.6px;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    line-height: 18px;
     overflow: auto;
 }
 
@@ -317,7 +318,6 @@ header h2 {
 }
 
 code {
-    background-color: #F9F2F4;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     border-top-left-radius: 4px;
@@ -328,10 +328,9 @@ code {
     font-size: 12.6px;
     line-height: 18px;
     padding-bottom: 2px;
-    padding-left: 4px;
+    padding-left: 0px;
     padding-right: 4px;
     padding-top: 2px;
-    white-space: nowrap;
 }
 
 footer {
