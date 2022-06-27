@@ -47,7 +47,7 @@
     {% if DISPLAY_HEADER or DISPLAY_HEADER is not defined %}
     <header>
         {% if DISPLAY_MENU or DISPLAY_MENU is not defined %}
-        <nav>
+        <nav style="overflow: hidden;">
             <ul>
             {% block ephemeral_nav %}{% endblock %}
                 {% if DISPLAY_HOME or DISPLAY_HOME is not defined %}
