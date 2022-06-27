@@ -1,7 +1,7 @@
 ![screenshot](screenshot.png)
 
-# Blue Penguin for pelican
-A simple theme for pelican. Solarized pygments. Feeds support.
+# Blue Penguin Dark for pelican
+A simple dark theme for pelican. Solarized pygments. Feeds support.
 
 ## Settings
 ```python
