@@ -119,7 +119,9 @@ thead {
     -mox-border-radius: 50%;
     -webkit-border-radius: 50%;
     position: relative;
-    bottom: -15px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
     display: inline;
     padding-right: 5px;
 }
@@ -279,6 +281,12 @@ nav li.selected a {
 
 header .header_box {
     padding-top: 4.5em;
+    
+}
+.site_title {
+    position: relative; 
+    bottom: 15px; 
+    color: #15A9DB
 }
 header h1 {
     font-size: 1.5em;
