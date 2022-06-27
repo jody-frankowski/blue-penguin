@@ -6,6 +6,26 @@ License: none (public domain)
 /* Modified by Jody Frankowski */
 /* Modified by ix5 */
 /* Modified by Tyler Carr */
+
+:root {
+    --main-bg-color: #1c2833;
+    --code-bg-color: #17202a;
+    --accent-color: #C7254E;
+    --tab-bg-hover: var(--code-bg-color);
+    --info-bg-color: var(--code-gb-color);
+}
+
+/* comment out media query to disable light mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-bg-color: #FFFFFF;
+        --accent-color: #FFFFFF;
+        --tab-bg-hover: #d3d3d3;
+        --info-bg-color: #CCC;
+    }
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -40,7 +60,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    background-color: #1c2833;
+    background-color: var(--main-bg-color);
 }
 ol, ul {
     list-style: none;
@@ -146,7 +166,7 @@ thead {
     color: inherit;
 }
 .info a.tags {
-    background: #17202a;
+    background: var(--info-bg-color);
     color: #FFF;
     display: inline-block;
     padding: 0 .3em;
@@ -182,11 +202,11 @@ thead {
 }
 .code > .highlight {
     border-radius: 0px 3px 3px 0px;
-    background-color: #17202a;
+    background-color: var(--code-bg-color);
 }
 .linenos {
     border-radius: 3px 0px 0px 3px;
-    background-color: #17202a;
+    background-color: var(--code-bg-color);
     border-right: 1px solid #00232C;
     color: #586E75;
     text-shadow: 0px -1px #021014;
@@ -231,7 +251,7 @@ sub {
     font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
     line-height: 18px;
     overflow: auto;
-    background-color: #17202a;
+    background-color: var(--code-bg-color);
 }
 
 form.inline_edit {
@@ -271,8 +291,8 @@ nav a {
     padding: 4.5em 10px 10px 10px;
 }
 nav a:hover {
-    background-color: #17202a;
-    color: #C7254E;
+    background-color: var(--tab-bg-hover);
+    color: var(--accent-color);
 }
 nav li.selected a {
     background-color: #15A9DB;
