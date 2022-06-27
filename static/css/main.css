@@ -5,7 +5,7 @@ License: none (public domain)
 /* Mockingbird Theme by Nevan Scott nevanscott.com */
 /* Modified by Jody Frankowski */
 /* Modified by ix5 */
-
+/* Modified by Tyler Carr */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,6 +22,7 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
+    color: #BBB;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -39,6 +40,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    background-color: #1c2833;
 }
 ol, ul {
     list-style: none;
@@ -112,6 +114,16 @@ thead {
     border-bottom: 1px solid black;
 }
 
+.avatar {
+    border-radius: 50%;
+    -mox-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: relative;
+    bottom: -15px;
+    display: inline;
+    padding-right: 5px;
+}
+
 .date {
     color: #CCC;
     float: left;
@@ -132,7 +144,7 @@ thead {
     color: inherit;
 }
 .info a.tags {
-    background: #CCC;
+    background: #17202a;
     color: #FFF;
     display: inline-block;
     padding: 0 .3em;
@@ -168,10 +180,11 @@ thead {
 }
 .code > .highlight {
     border-radius: 0px 3px 3px 0px;
+    background-color: #17202a;
 }
 .linenos {
     border-radius: 3px 0px 0px 3px;
-    background-color: #073642;
+    background-color: #17202a;
     border-right: 1px solid #00232C;
     color: #586E75;
     text-shadow: 0px -1px #021014;
@@ -216,6 +229,7 @@ sub {
     font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
     line-height: 18px;
     overflow: auto;
+    background-color: #17202a;
 }
 
 form.inline_edit {
@@ -255,8 +269,8 @@ nav a {
     padding: 4.5em 10px 10px 10px;
 }
 nav a:hover {
-    background-color: #d3d3d3;
-    color: #FFF;
+    background-color: #17202a;
+    color: #C7254E;
 }
 nav li.selected a {
     background-color: #15A9DB;
@@ -285,7 +299,7 @@ header h2 {
     font-family: sans-serif;
     line-height: 2.5em;
     margin: 4.5em 0 3em;
-    background-color: #F9F9F9;
+    background-color:  #2e4053;
     border-radius: 5px;
 }
 .pages a.next_page {
@@ -323,6 +337,7 @@ code {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     box-sizing: border-box;
+    background-color: #17202a;
     color: #C7254E;
     font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
     font-size: 12.6px;
