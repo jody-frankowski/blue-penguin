@@ -1,4 +1,4 @@
-![screenshot](screenshot.png)
+![screenshot](https://tyler-carr.com/images/ftp/out.png)
 
 # Blue Penguin Dark for pelican
 A simple dark theme for pelican, with light/dark mode support using media queries. Solarized pygments. Feeds support.

@@ -1,0 +1,33 @@
+name: Create-Screenshot
+
+on:
+  release:
+    types: [ created ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+    - name: Install pelican
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install "pelican[markdown]"
+    - name: Setup Node
+      uses: actions/setup-node@v3
+    - run: npm install --global capture-website-cli
+    - run: |
+        pelican sample/content -s sample/settings.py -t .
+        pelican --listen &
+    - run: mkdir dist
+    - run: capture-website "http://127.0.0.1:8000" --dark-mode --output "dist/out.png"
+    - name: Upload screenshot
+      uses: genietim/ftp-action@releases/v2
+      with:
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        localdir: "dist"
+        remoteDir: "/"
