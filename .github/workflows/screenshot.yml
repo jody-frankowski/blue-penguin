@@ -17,12 +17,17 @@ jobs:
         python -m pip install "pelican[markdown]"
     - name: Setup Node
       uses: actions/setup-node@v3
-    - run: npm install --global capture-website-cli
     - run: |
+        mkdir dist
+        npm install --global capture-website-cli
         pelican sample/content -s sample/settings.py -t .
         pelican --listen &
-    - run: mkdir dist
     - run: capture-website "http://127.0.0.1:8000" --dark-mode --output "dist/out.png"
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: screenshot
+        path: dist/out.png
     - name: Upload screenshot
       uses: genietim/ftp-action@releases/v2
       with:
