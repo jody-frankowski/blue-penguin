@@ -1,7 +1,7 @@
 ![screenshot](https://tyler-carr.com/images/ftp/out.png)
 
 # Blue Penguin Dark for pelican
-A simple dark theme for pelican, with light/dark mode support using media queries. Solarized pygments. Feeds support.
+A simple dark theme for pelican, with light/dark mode support using media queries available. Solarized pygments. Feeds support.
 
 This theme has been adapted from the original [Blue Penguin Theme](https://github.com/jody-frankowski/blue-penguin) for use on [my website](https://tyler-carr.com), all changes are generic and this theme can be used interchangeably with the original. 
 
@@ -17,6 +17,7 @@ DISPLAY_HEADER = True
 DISPLAY_FOOTER = True
 DISPLAY_HOME   = True
 DISPLAY_MENU   = True
+DARK_LIGHT_SWITCHING_OFF = True
 
 # provided as examples, they make ‘clean’ urls. used by MENU_INTERNAL_PAGES.
 TAGS_URL           = 'tags'
@@ -49,7 +50,12 @@ PAGINATION_PATTERNS = (
 
 ```
 
-Light mode can be disabled by commenting out or removing the media query in main.css
+Dark/Light switching is disabled by default, but can be enabled in the config file by adding:
+
+```
+DARK_LIGHT_SWITCHING_OFF = FALSE
+```
+
 
 ## How to contribute
 Contributions are very welcome. Keep in mind that this theme goal is to be

@@ -15,15 +15,6 @@ License: none (public domain)
     --info-bg-color: var(--code-gb-color);
 }
 
-/* comment out media query to disable light mode */
-@media (prefers-color-scheme: light) {
-    :root {
-        --main-bg-color: #FFFFFF;
-        --accent-color: #FFFFFF;
-        --tab-bg-hover: #d3d3d3;
-        --info-bg-color: #CCC;
-    }
-}
 
 
 html, body, div, span, applet, object, iframe,
