@@ -29,10 +29,10 @@ jobs:
         name: screenshot
         path: dist/out.png
     - name: Upload screenshot
-      uses: genietim/ftp-action@releases/v2
+      uses: wangyucode/sftp-upload-action@v1.3.3
       with:
         host: ${{ secrets.FTP_SERVER }}
         user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
+        privateKey: ${{ secrets.FTP_KEY }}
         localdir: "dist"
         remoteDir: "/"
