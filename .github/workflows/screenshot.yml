@@ -32,7 +32,7 @@ jobs:
       uses: wangyucode/sftp-upload-action@v1.3.3
       with:
         host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
+        username: ${{ secrets.FTP_USERNAME }}
         privateKey: ${{ secrets.FTP_KEY }}
         localdir: "dist"
         remoteDir: "/"
