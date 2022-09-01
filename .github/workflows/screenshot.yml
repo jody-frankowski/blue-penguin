@@ -44,6 +44,5 @@ jobs:
         path: 'tyler-carr.com'
         add-paths: 'tyler-carr.com/content/images/ftp/out.png'
         commit-message: 'blue-penguin-dark update $(git rev-parse --short HEAD)'
-        branch: 'screenshot-update'
         delete-branch: True
 
