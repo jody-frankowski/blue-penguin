@@ -35,9 +35,8 @@ jobs:
         repository: 'tcarwash/tyler-carr.com'
         path: 'tyler-carr.com'
     - run: |
-        ls tyler-carr.com
         mkdir -p tyler-carr.com/content/images/ftp
-        cp dist/out.png tyler-carr.com/content/images/ftp/
+        cp dist/out.png tyler-carr.com/content/images/ftp/out.png
     - name: create pull request on tyler-carr.com
       uses: peter-evans/create-pull-request@v4
       with:
@@ -45,3 +44,5 @@ jobs:
         add-paths: 'tyler-carr.com/content/images/ftp/out.png'
         commit-message: 'blue-penguin-dark update $(git rev-parse --short HEAD)'
         branch: 'screenshot-update'
+        delete-branch: True
+
