@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: set ref var
+      run: | 
+        echo "action_ref=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
     - name: Set up Python
       uses: actions/setup-python@v2
     - name: Install pelican
@@ -36,12 +39,12 @@ jobs:
         path: 'tyler-carr.com'
     - run: |
         mkdir -p tyler-carr.com/content/images/ftp
-        cp dist/out.png tyler-carr.com/content/images/ftp/screenshot-test.png
+        cp dist/out.png tyler-carr.com/content/images/ftp/out.png
     - name: create pull request on tyler-carr.com
       uses: peter-evans/create-pull-request@v4
       with:
         token: ${{ secrets.pr_token }}
         path: 'tyler-carr.com'
-        commit-message: 'blue-penguin-dark update $(git rev-parse --short HEAD)'
+        commit-message: 'blue-penguin-dark update ${{ env.action_ref }}'
         delete-branch: True
 
