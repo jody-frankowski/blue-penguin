@@ -6,6 +6,8 @@ Authors: Alexis Metaireau, Conan Doyle
 Summary: Short version for index and feeds
 
 ```
+#!/usr/bin/python3
+
 while True:
     print("Pelican is neat!")
 ```
