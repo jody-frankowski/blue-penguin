@@ -44,11 +44,3 @@ jobs:
         add-paths: 'content/images/ftp/out.png'
         commit-message: 'blue-penguin-dark update $(git rev-parse --short HEAD)'
         branch: 'screenshot-update'
-    - name: Upload screenshot
-      uses: wangyucode/sftp-upload-action@v1.3.3
-      with:
-        host: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        privateKey: ${{ secrets.FTP_KEY }}
-        localdir: "dist"
-        remoteDir: "/"
