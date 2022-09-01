@@ -42,7 +42,6 @@ jobs:
       with:
         token: ${{ secrets.pr_token }}
         path: 'tyler-carr.com'
-        add-paths: 'tyler-carr.com/content/images/ftp/'
         commit-message: 'blue-penguin-dark update $(git rev-parse --short HEAD)'
         delete-branch: True
 
