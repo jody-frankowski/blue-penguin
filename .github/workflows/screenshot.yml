@@ -35,6 +35,7 @@ jobs:
         repoistory: 'tcarwash/tyler-carr.com'
         path: 'tyler-carr.com'
     - run: |
+        ls
         cp dist/out.png tyler-carr.com/content/images/ftp/
     - name: create pull request on tyler-carr.com
       uses: peter-evans/create-pull-request@v4
