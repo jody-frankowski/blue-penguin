@@ -32,7 +32,7 @@ jobs:
     - name: Checkout tyler-carr.com
       uses: actions/upload-artifact@v3
       with: 
-        repoistory: 'tcarwash/tyler-carr.com'
+        repository: 'tcarwash/tyler-carr.com'
         path: 'tyler-carr.com'
     - run: |
         ls
