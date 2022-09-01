@@ -40,6 +40,7 @@ jobs:
     - name: create pull request on tyler-carr.com
       uses: peter-evans/create-pull-request@v4
       with:
+        token: ${{ secrets.pr_token }}
         path: 'tyler-carr.com'
         add-paths: 'tyler-carr.com/content/images/ftp/out.png'
         commit-message: 'blue-penguin-dark update $(git rev-parse --short HEAD)'
