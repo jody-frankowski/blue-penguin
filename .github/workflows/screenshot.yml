@@ -37,14 +37,12 @@ jobs:
     - run: |
         mkdir -p tyler-carr.com/content/images/ftp
         cp dist/out.png tyler-carr.com/content/images/ftp/screenshot-test.png
-        ls tyler-carr.com
-        ls -la tyler-carr.com/content/images/ftp
     - name: create pull request on tyler-carr.com
       uses: peter-evans/create-pull-request@v4
       with:
         token: ${{ secrets.pr_token }}
         path: 'tyler-carr.com'
-        add-paths: 'tyler-carr.com/content/images/ftp/out.png'
+        add-paths: 'tyler-carr.com/content/images/ftp/'
         commit-message: 'blue-penguin-dark update $(git rev-parse --short HEAD)'
         delete-branch: True
 
