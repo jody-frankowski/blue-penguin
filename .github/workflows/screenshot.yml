@@ -30,12 +30,12 @@ jobs:
         name: screenshot
         path: dist/out.png
     - name: Checkout tyler-carr.com
-      uses: actions/upload-artifact@v3
+      uses: actions/checkout@v2
       with: 
         repository: 'tcarwash/tyler-carr.com'
         path: 'tyler-carr.com'
     - run: |
-        ls
+        mkdir -p tyler-carr.com/content/images/ftp
         cp dist/out.png tyler-carr.com/content/images/ftp/
     - name: create pull request on tyler-carr.com
       uses: peter-evans/create-pull-request@v4
