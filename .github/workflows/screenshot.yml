@@ -35,6 +35,7 @@ jobs:
         repository: 'tcarwash/tyler-carr.com'
         path: 'tyler-carr.com'
     - run: |
+        git checkout dev
         mkdir -p tyler-carr.com/content/images/ftp
         cp dist/out.png tyler-carr.com/content/images/ftp/out.png
     - name: create pull request on tyler-carr.com
