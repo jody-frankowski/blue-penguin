@@ -34,10 +34,11 @@ jobs:
       with: 
         repository: 'tcarwash/tyler-carr.com'
         path: 'tyler-carr.com'
-        ref: 'dev'
     - run: |
         mkdir -p tyler-carr.com/content/images/ftp
         cp dist/out.png tyler-carr.com/content/images/ftp/out.png
+        ls tyler-carr.com
+        ls -la tyler-carr.com/content/images/ftp
     - name: create pull request on tyler-carr.com
       uses: peter-evans/create-pull-request@v4
       with:
