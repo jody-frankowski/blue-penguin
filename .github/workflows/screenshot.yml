@@ -36,7 +36,7 @@ jobs:
         path: 'tyler-carr.com'
     - run: |
         mkdir -p tyler-carr.com/content/images/ftp
-        cp dist/out.png tyler-carr.com/content/images/ftp/out.png
+        cp dist/out.png tyler-carr.com/content/images/ftp/screenshot-test.png
         ls tyler-carr.com
         ls -la tyler-carr.com/content/images/ftp
     - name: create pull request on tyler-carr.com
