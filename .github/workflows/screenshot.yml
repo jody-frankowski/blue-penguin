@@ -1,8 +1,9 @@
 name: Create-Screenshot
-
 on:
   release:
     types: [ created ]
+  push:
+  pull_request:
 
 jobs:
   build:
@@ -28,6 +29,20 @@ jobs:
       with:
         name: screenshot
         path: dist/out.png
+    - name: Checkout tyler-carr.com
+      uses: actions/upload-artifact@v3
+      with: 
+        repoistory: 'tcarwash/tyler-carr.com'
+        path: 'tyler-carr.com'
+    - run: |
+        cp dist/out.png tyler-carr.com/content/images/ftp/
+    - name: create pull request on tyler-carr.com
+      uses: peter-evans/create-pull-request@v4
+      with:
+        path: 'tyler-carr.com'
+        add-paths: 'content/images/ftp/out.png'
+        commit-message: 'blue-penguin-dark update $(git rev-parse --short HEAD)'
+        branch: 'screenshot-update'
     - name: Upload screenshot
       uses: wangyucode/sftp-upload-action@v1.3.3
       with:
