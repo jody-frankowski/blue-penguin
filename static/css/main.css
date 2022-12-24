@@ -81,6 +81,18 @@ ol {
     list-style: outside decimal;
 }
 
+dl {
+    margin-left: 3em;
+}
+
+dd {
+    margin-left: 3em;
+}
+
+dd > p {
+    margin-top: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
     font-weight: bold;
@@ -91,7 +103,7 @@ h1, h2, h3 {
     margin: 1em 0;
 }
 
-img, svg, p, .post > .highlight, .highlighttable, h4, h5, h6 {
+img, svg, p, .post > .highlight, .highlighttable, h4, h5, h6, dl {
     margin-top: 1.2em;
 }
 img + em {
