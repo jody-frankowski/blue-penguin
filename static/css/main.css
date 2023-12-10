@@ -9,7 +9,7 @@ License: none (public domain)
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, svg, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, li,
@@ -81,6 +81,18 @@ ol {
     list-style: outside decimal;
 }
 
+dl {
+    margin-left: 3em;
+}
+
+dd {
+    margin-left: 3em;
+}
+
+dd > p {
+    margin-top: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
     font-weight: bold;
@@ -91,7 +103,7 @@ h1, h2, h3 {
     margin: 1em 0;
 }
 
-img, p, .post > .highlight, .highlighttable, h4, h5, h6 {
+img, svg, p, .post > .highlight, .highlighttable, h4, h5, h6, dl {
     margin-top: 1.2em;
 }
 img + em {
@@ -185,7 +197,7 @@ td.code {
     color: #586E75;
 }
 
-img {
+img, svg {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 0.3em;
     max-width: 100%;
@@ -389,7 +401,7 @@ footer p { margin: 0; }
     header, footer, nav {
         display: none;
     }
-    img {
+    img, svg {
         break-inside: avoid;
     }
     p, table, pre {
